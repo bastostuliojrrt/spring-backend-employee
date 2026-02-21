@@ -17,15 +17,19 @@ public class Employee {
     private String lastName;
     @Column(name = "email_id")
     private String emailId;
+    @Column(name = "departament_id")
+    private String departamentId;
 
     public Employee(){
 
+
     }
 
-    public Employee(String firstName, String lastName, String email) {
+    public Employee(String firstName, String lastName, String email, String departamentId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = email;
+        this.departamentId = departamentId;
     }
 
     public long getId() {
@@ -58,5 +62,13 @@ public class Employee {
 
     public void setEmailId(String email) {
         this.emailId = email;
+    }
+
+    public String getDepartamentId() {
+        return departamentId;
+    }
+
+    public void setDepartamentId(String departamentId) {
+        this.departamentId = departamentId;
     }
 }
