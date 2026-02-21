@@ -1,7 +1,7 @@
-package com.javaspring.user_registration.controller;
+package com.javaspring.backend.controller;
 
-import com.javaspring.user_registration.model.Employee;
-import com.javaspring.user_registration.repository.EmployeeRepository;
+import com.javaspring.backend.model.Employee;
+import com.javaspring.backend.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

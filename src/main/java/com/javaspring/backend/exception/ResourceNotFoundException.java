@@ -1,4 +1,4 @@
-package com.javaspring.user_registration.exception;
+package com.javaspring.backend.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

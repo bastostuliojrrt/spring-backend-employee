@@ -1,10 +1,10 @@
-package com.javaspring.user_registration;
+package com.javaspring.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserRegistrationApplicationTests {
+class EmployeeRegistrationApplicationTests {
 
 	@Test
 	void contextLoads() {

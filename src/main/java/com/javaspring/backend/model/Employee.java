@@ -1,4 +1,4 @@
-package com.javaspring.user_registration.model;
+package com.javaspring.backend.model;
 
 import jakarta.persistence.*;
 

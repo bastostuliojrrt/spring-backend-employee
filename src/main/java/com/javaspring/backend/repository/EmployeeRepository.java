@@ -1,6 +1,6 @@
-package com.javaspring.user_registration.repository;
+package com.javaspring.backend.repository;
 
-import com.javaspring.user_registration.model.Employee;
+import com.javaspring.backend.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
