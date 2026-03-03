@@ -29,13 +29,30 @@ public class EmployeeController {
         return employeeRepository.save(employee);
     }
 
-    // get employee by id rest api
+    // get employee by id REST API
     @GetMapping("/employees/{id}")
     public ResponseEntity <Employee> getEmployeeById(@PathVariable long id){
         //
         Employee employee = employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
 
         return ResponseEntity.ok(employee);
+    }
+
+    // update employee REST API
+    @PutMapping("/employees/{id}")
+    public ResponseEntity<Employee> updateEmployee (@PathVariable long id, @RequestBody Employee employeeDetails){
+        // find employee by id
+        Employee employee = employeeRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not exist with id: " + id));
+
+        // update values of employee by employeeDetail's values
+        employee.setFirstName(employeeDetails.getFirstName());
+        employee.setLastName(employeeDetails.getLastName());
+        employee.setDepartamentId(employeeDetails.getDepartamentId());
+        employee.setEmailId(employeeDetails.getEmailId());
+
+        Employee updatedEmployee = employeeRepository.save(employee);
+
+        return ResponseEntity.ok(updatedEmployee);
     }
 
 }
